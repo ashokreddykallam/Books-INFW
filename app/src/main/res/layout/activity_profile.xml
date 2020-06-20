@@ -19,9 +19,10 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24" />
 
         <TextView
             android:id="@+id/P_name"
@@ -29,8 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text=""
-            android:textColor="@android:color/white"
             android:textSize="20dp"
+            android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
@@ -38,15 +39,15 @@
 
         <TextView
             android:id="@+id/P_Badge"
-            android:layout_width="123dp"
-            android:layout_height="103dp"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
             android:background="@drawable/badge"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toEndOf="@+id/P_name"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.537" />
+            app:layout_constraintVertical_bias="0.595" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
