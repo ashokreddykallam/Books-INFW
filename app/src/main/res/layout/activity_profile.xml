@@ -8,15 +8,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="310dp"
         android:background="@drawable/pr_back">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:id="@+id/P_Profile"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:background="@drawable/ic_person"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -31,23 +30,40 @@
             android:layout_centerHorizontal="true"
             android:text=""
             android:textSize="20dp"
+            android:layout_marginTop="13dp"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/P_Profile" />
 
 
         <TextView
             android:id="@+id/P_Badge"
-            android:layout_width="21dp"
-            android:layout_height="21dp"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/badge"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/P_name"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.595" />
+            app:layout_constraintVertical_bias="0.601" />
+
+        <TextView
+            android:id="@+id/P_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Creator of Books App And Computer Enthusiast"
+            android:textSize="13dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P_name" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
