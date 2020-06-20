@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +32,8 @@ public class RegisterActivity extends AppCompatActivity {
     EditText RName,REmail,RPassword;
     Button BSubmit;
 
+    TextView loguni;
+
      FirebaseAuth mAuth;
      Dialog dialog;
 
@@ -48,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
         BSubmit = findViewById(R.id.reg_submit);
         RName = findViewById(R.id.reg_name);
         REmail = findViewById(R.id.reg_mail);
+        loguni = findViewById(R.id.reg_login);
         RPassword = findViewById(R.id.reg_password);
 
         dialog = new Dialog(this);
@@ -59,26 +63,34 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+        loguni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         BSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.create();
                 if (RName.length() == 0){
                     RName.setError("Name is Required");
-
+                    dialog.dismiss();
                     return;
                 }
 
                 if (REmail.length() == 0){
                     REmail.setError("Email is Required");
-
+                    dialog.dismiss();
                     return;
                 }
 
                 if (RPassword.length() == 0){
                     RPassword.setError("Password is Required");
-
+                    dialog.dismiss();
                     return;
                 }
 
