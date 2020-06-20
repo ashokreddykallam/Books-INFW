@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "647747210284",
+    "firebase_url": "https://books-infw.firebaseio.com",
+    "project_id": "books-infw",
+    "storage_bucket": "books-infw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647747210284:android:5acf450fc471ca88ef5589",
+        "android_client_info": {
+          "package_name": "com.infendwes.books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647747210284-cicg7ett82ulq7bhl012cpbag7b0c890.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD69dEeYx6O4wgdaUZVu7_iAgssxLKgH-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647747210284-cicg7ett82ulq7bhl012cpbag7b0c890.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
