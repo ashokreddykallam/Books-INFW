@@ -7,15 +7,14 @@
     tools:context=".ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profilebatch"
         android:layout_width="match_parent"
         android:layout_height="310dp"
         android:background="@drawable/pr_back">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/P_Profile"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="132dp"
+            android:layout_height="131dp"
             android:background="@drawable/ic_person"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
             android:text=""
+            android:textSize="20dp"
+            android:layout_marginTop="13dp"
             android:textColor="@android:color/white"
-            android:textSize="19dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/P_Profile" />
@@ -40,64 +39,47 @@
 
         <TextView
             android:id="@+id/P_Badge"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
             android:layout_marginStart="2dp"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/badge"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.246"
             app:layout_constraintStart_toEndOf="@+id/P_name"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.601" />
+            app:layout_constraintVertical_bias="0.519" />
 
         <TextView
             android:id="@+id/P_Description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="253dp"
+            android:layout_height="33dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="13dp"
-            android:text=""
-            android:textColor="@android:color/darker_gray"
-            android:textSize="13dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P_name" />
-
-        <ProgressBar
-            android:id="@+id/P_Progress"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/colorPrimary"
-            android:indeterminateTintMode="src_atop"
+            android:text="the name of the author"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/P_name"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <GridView
-        android:id="@+id/P_Grid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:layout_above="@+id/bottom_navigation"
-        android:layout_below="@+id/profilebatch"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:verticalSpacing="16dp"
-        android:horizontalSpacing="16dp"
-        android:numColumns="3"
-        >
-
-
-    </GridView>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="197dp"
+        android:layout_marginBottom="187dp"
+        android:text="Author's Books Will be here" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
