@@ -59,9 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 Glide.with(ProfileActivity.this).load(document.get("profile").toString()).into(PProfile);
                             }
 
-                            if (verify.equals("verified")){
-                                PBadge.setVisibility(View.VISIBLE);
-                            }
+                            
 
 
                         }else {
