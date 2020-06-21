@@ -32,7 +32,7 @@
             android:layout_marginTop="13dp"
             android:text=""
             android:textColor="@android:color/white"
-            android:textSize="20dp"
+            android:textSize="19dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/P_Profile" />
@@ -59,12 +59,24 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="13dp"
-            android:text="Creator of Books App And Computer Enthusiast"
+            android:text=""
             android:textColor="@android:color/darker_gray"
             android:textSize="13dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/P_name" />
+
+        <ProgressBar
+            android:id="@+id/P_Progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateTintMode="src_atop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -82,7 +94,10 @@
         android:verticalSpacing="16dp"
         android:horizontalSpacing="16dp"
         android:numColumns="3"
-        />
+        >
+
+
+    </GridView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

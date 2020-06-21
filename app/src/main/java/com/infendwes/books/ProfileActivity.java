@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +25,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextView PName,PBadge;
+    TextView PName,PBadge,PDescription;
     CircleImageView PProfile;
+    ProgressBar PProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,13 @@ public class ProfileActivity extends AppCompatActivity {
         PName = findViewById(R.id.P_name);
         PBadge = findViewById(R.id.P_Badge);
         PProfile = findViewById(R.id.P_Profile);
+        PDescription = findViewById(R.id.P_Description);
+        PProgress = findViewById(R.id.P_Progress);
 
+        PName.setVisibility(View.INVISIBLE);
         PBadge.setVisibility(View.INVISIBLE);
+        PProfile.setVisibility(View.INVISIBLE);
+        PDescription.setVisibility(View.INVISIBLE);
 
         db.collection("users")
                 .document(FirebaseAuth.getInstance().getUid())
@@ -51,6 +58,7 @@ public class ProfileActivity extends AppCompatActivity {
                             DocumentSnapshot document = task.getResult();
                             PName.setText(document.get("name").toString());
                             String verify = document.get("verify").toString();
+                            PDescription.setText(document.get("description").toString());
 
                             if (document.get("profile").toString().trim().equals("default")){
 
@@ -59,7 +67,14 @@ public class ProfileActivity extends AppCompatActivity {
                                 Glide.with(ProfileActivity.this).load(document.get("profile").toString()).into(PProfile);
                             }
 
-                            
+                            if (verify.equals("verified")){
+                                PBadge.setVisibility(View.VISIBLE);
+                            }
+                            PProgress.setVisibility(View.INVISIBLE);
+                            PName.setVisibility(View.VISIBLE);
+                            PBadge.setVisibility(View.VISIBLE);
+                            PProfile.setVisibility(View.VISIBLE);
+                            PDescription.setVisibility(View.VISIBLE);
 
 
                         }else {
@@ -67,6 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
                         }
                     }
                 });
+
 
 
 
