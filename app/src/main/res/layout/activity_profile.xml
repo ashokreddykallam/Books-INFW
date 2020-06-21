@@ -11,31 +11,31 @@
         android:layout_height="310dp"
         android:background="@drawable/pr_back">
 
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/P_Profile"
-            android:layout_width="132dp"
-            android:layout_height="131dp"
+            android:layout_width="185dp"
+            android:layout_height="186dp"
             android:background="@drawable/ic_person"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.24" />
+            app:layout_constraintVertical_bias="0.101" />
 
         <TextView
             android:id="@+id/P_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="2dp"
+            android:layout_height="9dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
             android:text=""
-            android:textSize="20dp"
-            android:layout_marginTop="13dp"
             android:textColor="@android:color/white"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/P_Profile" />
-
 
         <TextView
             android:id="@+id/P_Badge"
@@ -54,8 +54,8 @@
 
         <TextView
             android:id="@+id/P_Description"
-            android:layout_width="253dp"
-            android:layout_height="33dp"
+            android:layout_width="248dp"
+            android:layout_height="34dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="13dp"
             android:text="the name of the author"
@@ -63,7 +63,7 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintHorizontal_bias="0.57"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/P_name"
             app:layout_constraintVertical_bias="0.0" />
